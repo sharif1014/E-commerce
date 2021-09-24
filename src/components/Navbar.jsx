@@ -60,12 +60,13 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex-wrap: wrap;
 `;
 const MenuItem = styled.div`
   font-weight: 500;
   font-size: 1rem;
   color: #000;
-  margin-right: 1rem;
+  margin-left: 1.25rem;
   cursor: pointer;
 `;
 
