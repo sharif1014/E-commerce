@@ -69,7 +69,7 @@ const Button = styled.button`
   padding: 10px;
   font-size: 1.125rem;
   background-color:#fff;
-  color:#2430241f;
+  color:#3b052b;
   cursor: pointer;
 `;
 
@@ -82,7 +82,7 @@ const Slider = () => {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
   };
-
+    // setInterval(handleClick,5000);
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
