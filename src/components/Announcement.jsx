@@ -9,12 +9,10 @@ const Container = styled.div`
   align-items: center;
   height: 2rem;
   justify-content: center;
-  background: teal;
+  background: #075555;
   
 `;
 const Span =styled.span`
-background-color: crimson;
-padding: 5px 15px;
 color: white;
 `
 
