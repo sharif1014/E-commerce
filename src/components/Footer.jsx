@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Facebook, Instagram, LinkedIn, MailOutline, Phone, Room, Twitter } from "@material-ui/icons";
+import { mobile } from "../Responsive";
 
 const Container = styled.div`
 margin-top:1rem;
@@ -8,12 +9,14 @@ margin-top:1rem;
   align-items: center;
   justify-content: space-between;
   background-color: #9eb8b6;
+  ${mobile({ flexDirection: "column" })}
 `;
 const Left = styled.div`
   padding: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
+  ${mobile({ alignItems:"center" })}
 `;
 const Logo = styled.h1`
   font-weight: 700;
@@ -49,7 +52,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-
+  ${mobile({ display: "none" })}
 `;
 const Title = styled.h3`
   margin-bottom: 30px;
@@ -70,6 +73,7 @@ const ListItem = styled.li`
 
 const Right = styled.div`
   flex: 1;
+  ${mobile({ backgroundColor: "#fff8f8",padding:"1rem" })}
 `;
 
 const ContactItem =styled.div`

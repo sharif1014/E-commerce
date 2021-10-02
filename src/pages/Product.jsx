@@ -5,7 +5,7 @@ import Newsletter from './../components/Newsletter';
 import Footer from './../components/Footer';
 import  styled  from 'styled-components';
 import { Add, Remove } from '@material-ui/icons';
-
+import {mobile} from "../Responsive"
 
 const Container =styled.div``
 
@@ -13,6 +13,7 @@ const Wrapper =styled.div`
 padding: 3rem;
 display: flex;
 justify-content: space-between;
+${mobile({ padding: "10px", flexDirection:"column" })}
 `
 
 const ImgContainer =styled.div`
@@ -21,11 +22,13 @@ flex: 1;
 
 const Image =styled.img`
 width: 100%;
+${mobile({ height: "40vh" })}
 `
 
 const InfoContainer =styled.div`
 flex: 1;
 padding:0rem 2rem;
+${mobile({ padding: "10px" })}
 `
 
 const Title =styled.h1`
@@ -47,6 +50,7 @@ width: 50%;
 margin: 1.75rem 0rem;
 display: flex;
 justify-content:space-between;
+${mobile({ width: "100%" })}
 `
 
 const Filter =styled.div`
@@ -89,6 +93,7 @@ width: 50%;
 margin: 3rem 0rem;
 display: flex;
 justify-content:space-between;
+${mobile({ width: "100%" })}
 `
 
 const AmountContainer = styled.div`

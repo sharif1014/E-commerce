@@ -1,15 +1,18 @@
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
+import { mobile } from "../Responsive";
 
 const Container = styled.div`
   height: 3.75rem;
+  ${mobile({ height: "50px" })}
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({ padding: "10px 0px" })}
 `;
 const Left = styled.div`
   flex: 1;
@@ -21,6 +24,7 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 0.85rem;
   cursor: pointer;
+  ${mobile({ display: "none" })}
 `;
 const SearchContainer = styled.div`
   border: 1px solid gray;
@@ -32,6 +36,7 @@ const SearchContainer = styled.div`
 `;
 const Input = styled.input`
   border: none;
+  ${mobile({ width: "50px" })}
   &:focus {
     outline: none;
   }
@@ -49,12 +54,14 @@ const Logo = styled.h1`
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
+  ${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 const MenuItem = styled.div`
   font-weight: 500;
@@ -62,6 +69,7 @@ const MenuItem = styled.div`
   color: #000;
   margin-left: 1.25rem;
   cursor: pointer;
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
 const Navbar = () => {

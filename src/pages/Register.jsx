@@ -1,5 +1,7 @@
 import { AccountBox, LockOpen, Send, MailOutline } from "@material-ui/icons";
 import styled from "styled-components";
+import {mobile} from "../Responsive"
+
 
 const Container = styled.div`
   height: 100vh;
@@ -9,12 +11,19 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${mobile({ backgroundColor:"white" })}
 `;
-
+const Wrapper =styled.div`
+ width: 40%;
+ height:100%;
+  padding: 20px;
+  ${mobile({ width: "75%" })}
+`
 const Form = styled.form`
-  width: 50%;
+  display: flex;
+  flex-direction: column;
   background-color: #3d746f;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   box-sizing: border-box;
   box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.75);
 `;
@@ -56,6 +65,7 @@ const InputContainer = styled.div`
   justify-content: space-between;
   border-bottom: 2px solid #ad240c;
   margin-bottom: 1.25rem;
+  ${mobile({ width: "95%",padding:"3px 6px" })}
 `;
 const Icon = styled.div`
   flex: 1;
@@ -65,6 +75,7 @@ const Icon = styled.div`
   justify-content: center;
   color: tomato;
   margin-right: 10px;
+  ${mobile({ display: "none" })}
 `;
 const Input = styled.input`
   flex: 8;
@@ -76,6 +87,7 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
+width:30%;
   font-size: 1rem;
   letter-spacing: 2px;
   padding: 5px 10px;
@@ -93,12 +105,21 @@ const Button = styled.button`
     background-color: white;
     color: #052b2b;
   }
+  ${mobile({ width: "100%",alignItems:"center" })}
 `;
+const Link =styled.a`
+margin: 1rem 0rem;
+font-size: 1rem;
+display:block;
+cursor: pointer;
+`
+
 const Register = () => {
   return (
     <Container>
+      <Wrapper>
       <Form>
-        <Title>Registration here</Title>
+        <Title>Create an account</Title>
         <ImgContainer>
           <Image src="https://cdn.pixabay.com/photo/2016/08/20/05/36/avatar-1606914_960_720.png" />
         </ImgContainer>
@@ -133,9 +154,11 @@ const Register = () => {
 
         <Button>
           SIGN UP
-          <Send style={{ marginLeft: ".5rem" }} />
+          <Send />
         </Button>
+        <Link>Have an account login?</Link>
       </Form>
+      </Wrapper>
     </Container>
   );
 };

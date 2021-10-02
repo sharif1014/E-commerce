@@ -1,5 +1,6 @@
 import { AccountBox, LockOpen, Send } from "@material-ui/icons";
 import styled from "styled-components";
+import {mobile} from "../Responsive"
 
 const Container = styled.div`
   height: 100vh;
@@ -10,9 +11,18 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 `;
+const Wrapper =styled.div`
+ width: 25%;
+  padding: 20px;
+  background-color: white;
+  ${mobile({ width: "75%" })}
+`
 
 const Form = styled.form`
-  width: 50%;
+   width: 25%;
+   padding: 2rem 1rem;
+  background-color: white;
+  ${mobile({ width: "75%" })}
   background-color: #3d746f;
   padding: 2rem 1rem;
   box-sizing: border-box;
@@ -98,6 +108,7 @@ const Button = styled.button`
 const Login = () => {
   return (
     <Container>
+      <Wrapper>
       <Form>
         <Title>Login to full access</Title>
         <ImgContainer>
@@ -121,6 +132,7 @@ const Login = () => {
           SIGN IN <Send style={{ marginLeft: ".5rem" }} />
         </Button>
       </Form>
+      </Wrapper>
     </Container>
   );
 };

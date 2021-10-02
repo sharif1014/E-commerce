@@ -4,6 +4,7 @@ import Announcement from "./../components/Announcement";
 import Products from "./../components/Products";
 import Newsletter from "./../components/Newsletter";
 import Footer from "./../components/Footer";
+import {mobile} from "../Responsive"
 
 const Container = styled.div`
  
@@ -17,14 +18,17 @@ const FilterContainer = styled.div`
 `;
 const Filter = styled.div`
   margin: 1.25rem;
+  ${mobile({ width: "0px 20px", display: "flex", flexDirection: "column" })}
 `;
 const FiltetText = styled.span`
   font-weight: 600;
   margin-right: 1rem;
+  ${mobile({ marginRight: "0px" })}
 `;
 const Select =styled.select`
 padding: 10px;
 margin-right:15px;
+${mobile({ margin: "10px 0px" })}
 `
 const Option =styled.option``
 const ProductList = () => {
